@@ -3,9 +3,10 @@ html
   height: 100%
 
 body
-  font-family: $body-font-family
+  font-family: $global-font-family
   line-height: $global-line-height
   font-size: $global-font-size
+  background-color: $global-background
   min-width: 320px
   position: relative
   height: 100%
@@ -34,21 +35,12 @@ body
   -ms-hyphens: auto
   -moz-hyphens: auto
   hyphens: auto
-  margin: 0
-  padding: 0
-  outline: 0
-
-textarea
-  overflow: auto
-  resize: none
 
 li
   list-style-type: none
 
-button,
-a
+button, a
   cursor: pointer
-  display: inline-block
 
 ::-webkit-inner-spin-button,
 ::-webkit-outer-spin-button
@@ -56,13 +48,7 @@ a
 
 a
   text-decoration: none
-
-input::-webkit-input-placeholder,
-input::-moz-placeholder,
-input:-moz-placeholder,
-input:-ms-input-placeholder
-  text-overflow: ellipsis
-
+  
 input:invalid
   box-shadow: none
 
@@ -100,12 +86,16 @@ input
 
 input::-webkit-input-placeholder
   opacity: 1
+  text-overflow: ellipsis
 
 input:-moz-placeholder
   opacity: 1
+  text-overflow: ellipsis
 
 input::-moz-placeholder
   opacity: 1
+  text-overflow: ellipsis
 
 input:-ms-input-placeholder
   opacity: 1
+  text-overflow: ellipsis
