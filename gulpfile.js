@@ -9,30 +9,29 @@ var gulp = require('gulp'),
     cache = require('gulp-cache'),
     connect = require('gulp-connect'),
     autoprefixer = require('gulp-autoprefixer'),
-    htmlmin = require('gulp-html-minifier');
+    htmlmin = require('gulp-html-minifier'),
+    iconfont = require('gulp-iconfont'),
+    iconfontCss = require('gulp-iconfont-css');
 
-//   iconfont = require('gulp-iconfont'),
-//   iconfontCss = require('gulp-iconfont-css');
+var fontName = 'Icons';
 
-// var fontName = 'Icons';
-
-// gulp.task('icon', function () {
-//   gulp.src(['src/icons/*.svg'])
-//     .pipe(iconfontCss({
-//       fontName: fontName,
-//       path: '',
-//       targetPath: '../../sass/_icons.scss',
-//       fontPath: '../../fonts/icons/'
-//     }))
-//     .pipe(iconfont({
-//       fontName: fontName,
-//       prependUnicode: true,
-//       formats: ['ttf', 'eot', 'woff', 'svg'],
-//       normalize: true,
-//       fontHeight: 1001
-//     }))
-//     .pipe(gulp.dest('src/fonts/icons/'));
-// });
+gulp.task('icon', function () {
+  gulp.src(['src/icons/*.svg'])
+    .pipe(iconfontCss({
+      fontName: fontName,
+      path: '',
+      targetPath: '../../sass/_icons.scss',
+      fontPath: '../../fonts/icons/'
+    }))
+    .pipe(iconfont({
+      fontName: fontName,
+      prependUnicode: true,
+      formats: ['ttf', 'eot', 'woff', 'svg'],
+      normalize: true,
+      fontHeight: 1001
+    }))
+    .pipe(gulp.dest('src/fonts/icons/'));
+});
 
 gulp.task('sass', function () {
   return gulp.src('src/sass/**/*.sass')

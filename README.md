@@ -25,3 +25,6 @@ $ node 8.9.0
 - > npm i -g npm-check-updates
 - > npm-check-updates -u
 - > npm install
+
+#### Npm latest
+- > npm install npm@latest -g
