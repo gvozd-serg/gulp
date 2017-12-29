@@ -1,0 +1,9 @@
+/node_modules/
+/build/
+.idea/
+*.log
+/.git/
+/src/css/
+/**/*.psd
+/**/Thumbs.db
+.sass-cache/

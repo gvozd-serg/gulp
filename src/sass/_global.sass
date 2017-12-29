@@ -1,0 +1,111 @@
+@import "settings"
+html
+  height: 100%
+
+body
+  font-family: $body-font-family
+  line-height: $global-line-height
+  font-size: $global-font-size
+  min-width: 320px
+  position: relative
+  height: 100%
+
+.clear:after
+  content: ''
+  display: block
+  clear: both
+
+.container
+  width: 100%
+  max-width: $global-width
+  padding: $global-container-padding
+  margin: 0 auto
+
+.hidden
+  display: none
+
+*
+  -webkit-box-sizing: border-box
+  -moz-box-sizing: border-box
+  box-sizing: border-box
+  overflow-wrap: break-word
+  word-wrap: break-word
+  -webkit-hyphens: auto
+  -ms-hyphens: auto
+  -moz-hyphens: auto
+  hyphens: auto
+  margin: 0
+  padding: 0
+  outline: 0
+
+textarea
+  overflow: auto
+  resize: none
+
+li
+  list-style-type: none
+
+button,
+a
+  cursor: pointer
+  display: inline-block
+
+::-webkit-inner-spin-button,
+::-webkit-outer-spin-button
+  -webkit-appearance: none
+
+a
+  text-decoration: none
+
+input::-webkit-input-placeholder,
+input::-moz-placeholder,
+input:-moz-placeholder,
+input:-ms-input-placeholder
+  text-overflow: ellipsis
+
+input:invalid
+  box-shadow: none
+
+input:-moz-submit-invalid
+  box-shadow: none
+
+input:-moz-ui-invalid
+  box-shadow: none
+
+input::-ms-clear
+  display: none
+
+input[type=number]
+  -moz-appearance: textfield
+
+input
+  -webkit-appearance: none
+  display: inline-block
+  &[type="color"],
+  &[type="date"],
+  &[type="datetime"],
+  &[type="datetime-local"],
+  &[type="email"],
+  &[type="month"],
+  &[type="number"],
+  &[type="password"],
+  &[type="search"],
+  &[type="tel"],
+  &[type="text"],
+  &[type="time"],
+  &[type="url"],
+  &[type="week"]
+    font-size: $global-font-size
+    border: 1px solid $black
+
+input::-webkit-input-placeholder
+  opacity: 1
+
+input:-moz-placeholder
+  opacity: 1
+
+input::-moz-placeholder
+  opacity: 1
+
+input:-ms-input-placeholder
+  opacity: 1
