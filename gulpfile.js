@@ -13,20 +13,27 @@ var gulp = require('gulp'),
     iconfont = require('gulp-iconfont'),
     iconfontCss = require('gulp-iconfont-css');
 
-var fontName = 'Icons';
+gulp.task('scripts', function () {
+  return gulp.src([
+    // 'node_modules/jquery/dist/jquery.min.js'
+  ])
+    .pipe(concat('libs.min.js'))
+    .pipe(gulp.dest('src/js'));
+});
 
+var fontName = 'Icons';
 gulp.task('icon', function () {
   gulp.src(['src/icons/*.svg'])
     .pipe(iconfontCss({
       fontName: fontName,
       path: '',
-      targetPath: '../../sass/_icons.scss',
-      fontPath: '../../fonts/icons/'
+      targetPath: '../icons/_icons.scss',
+      fontPath: '../fonts/icons/'
     }))
     .pipe(iconfont({
       fontName: fontName,
       prependUnicode: true,
-      formats: ['ttf', 'eot', 'woff', 'svg'],
+      formats: ['ttf', 'eot', 'woff2', 'svg'],
       normalize: true,
       fontHeight: 1001
     }))
@@ -41,14 +48,6 @@ gulp.task('sass', function () {
     .pipe(sourcemaps.write())
     .pipe(gulp.dest('src/css'))
     .pipe(connect.reload());
-});
-
-gulp.task('scripts', function () {
-  return gulp.src([
-    // 'node_modules/jquery/dist/jquery.min.js'
-  ])
-    .pipe(concat('libs.min.js'))
-    .pipe(gulp.dest('src/js'));
 });
 
 gulp.task('connect', function () {
@@ -77,7 +76,7 @@ gulp.task('watch', ['connect', 'css-libs', 'scripts'], function () {
 });
 
 gulp.task('clean', function () {
-  return del.sync('build');
+  return del.sync('dist');
 });
 
 gulp.task('build', ['clean', 'sass', 'scripts'], function () {
@@ -87,20 +86,23 @@ gulp.task('build', ['clean', 'sass', 'scripts'], function () {
     'src/css/libs.min.css'
   ])
     .pipe(csso())
-    .pipe(gulp.dest('build/css'));
+    .pipe(gulp.dest('dist/css'));
 
   var buildFonts = gulp.src('src/fonts/**/*')
-    .pipe(gulp.dest('build/fonts'));
+    .pipe(gulp.dest('dist/fonts'));
+
+  var buildIconFonts = gulp.src('src/icons/**/*')
+    .pipe(gulp.dest('dist/icons'));
 
   var buildImg = gulp.src('src/img/**/*')
-    .pipe(gulp.dest('build/img'));
+    .pipe(gulp.dest('dist/img'));
 
   var buildJs = gulp.src('src/js/**/*')
-    .pipe(gulp.dest('build/js'));
+    .pipe(gulp.dest('dist/js'));
 
   var buildHtml = gulp.src('src/*.html')
     .pipe(htmlmin({collapseWhitespace: true}))
-    .pipe(gulp.dest('build'));
+    .pipe(gulp.dest('dist'));
 });
 
 gulp.task('clear', function (callback) {

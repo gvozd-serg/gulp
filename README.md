@@ -1,6 +1,6 @@
 #### Require
 ```
-$ node 8.9.0
+$ node 9.3.0
 ``` 
 
 #### Installation
@@ -17,7 +17,7 @@ $ node 8.9.0
 
 #### Svg to icon_font generator
 
-1. add to folder icons svg files
+1. add to folder 'icons' svg files
 2. - > gulp icon
 3. Add to project sass/_icons.scss
 
