@@ -7,18 +7,31 @@ var gulp = require('gulp'),
     rename = require('gulp-rename'),
     del = require('del'),
     cache = require('gulp-cache'),
-    connect = require('gulp-connect'),
+    browserSync = require("browser-sync"),
     autoprefixer = require('gulp-autoprefixer'),
     htmlmin = require('gulp-html-minifier'),
     iconfont = require('gulp-iconfont'),
     iconfontCss = require('gulp-iconfont-css');
 
+gulp.task('browserSync', function() {
+  browserSync({
+    server: {
+      baseDir: "./src/"
+    },
+    port: 8080,
+    open: true,
+    notify: false
+  });
+});
+
 gulp.task('scripts', function () {
   return gulp.src([
-    // 'node_modules/jquery/dist/jquery.min.js'
+    'node_modules/jquery/dist/jquery.min.js'
+    // 'node_modules/sticky-footer/dist/js/sticky-footer.min.js'
   ])
     .pipe(concat('libs.min.js'))
-    .pipe(gulp.dest('src/js'));
+    .pipe(gulp.dest('src/js'))
+    .pipe(browserSync.reload({stream: true}));
 });
 
 var fontName = 'Icons';
@@ -47,19 +60,7 @@ gulp.task('sass', function () {
     .pipe(autoprefixer(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], {cascade: true}))
     .pipe(sourcemaps.write())
     .pipe(gulp.dest('src/css'))
-    .pipe(connect.reload());
-});
-
-gulp.task('connect', function () {
-  connect.server({
-    root: 'src',
-    livereload: true
-  });
-});
-
-gulp.task('reload', function () {
-  gulp.src('src/*')
-    .pipe(connect.reload());
+    .pipe(browserSync.reload({stream: true}));
 });
 
 gulp.task('css-libs', ['sass'], function () {
@@ -69,10 +70,10 @@ gulp.task('css-libs', ['sass'], function () {
     .pipe(gulp.dest('src/css'));
 });
 
-gulp.task('watch', ['connect', 'css-libs', 'scripts'], function () {
+gulp.task('watch', ['browserSync', 'css-libs', 'scripts'], function () {
   gulp.watch('src/sass/**/*.sass', ['sass']);
-  gulp.watch('src/*.html', ['reload']);
-  gulp.watch('src/js/**/*.js', ['reload']);
+  gulp.watch('src/*.html', browserSync.reload);
+  gulp.watch('src/js/**/*.js', browserSync.reload);
 });
 
 gulp.task('clean', function () {

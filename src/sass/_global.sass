@@ -16,12 +16,6 @@ body
   display: block
   clear: both
 
-.container
-  width: 100%
-  max-width: $global-width
-  padding: $global-container-padding
-  margin: 0 auto
-
 .hidden
   display: none
 
@@ -35,7 +29,7 @@ body
   -ms-hyphens: auto
   -moz-hyphens: auto
   hyphens: auto
-ul
+ul, p, h1, h2, h3, h4, h5, h6
   margin: 0
   padding: 0
   
@@ -103,6 +97,18 @@ input:-ms-input-placeholder
   opacity: 1
   text-overflow: ellipsis
   
+.container
+  width: 100%
+  max-width: $global-width
+  padding: $global-container-padding
+  margin: 0 auto
+  background-color: #cccccc
+  
 .icon-1
   font-size: rem(75px)
-  color: blue
+  color: #000000
+
+.footer
+  text-align: center
+  padding: rem(30px) rem(50px)
+  background-color: red
