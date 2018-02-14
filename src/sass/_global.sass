@@ -1,6 +1,7 @@
 @import "settings"
 html
   height: 100%
+  width: 100%
 
 body
   font-family: $global-font-family
@@ -10,14 +11,7 @@ body
   min-width: 320px
   position: relative
   height: 100%
-
-.clear:after
-  content: ''
-  display: block
-  clear: both
-
-.hidden
-  display: none
+  width: 100%
 
 *
   -webkit-box-sizing: border-box
@@ -97,18 +91,14 @@ input:-ms-input-placeholder
   opacity: 1
   text-overflow: ellipsis
   
-.container
-  width: 100%
-  max-width: $global-width
-  padding: $global-container-padding
-  margin: 0 auto
-  background-color: #cccccc
+.clear:after
+  content: ''
+  display: block
+  clear: both
   
-.icon-1
-  font-size: rem(75px)
-  color: #000000
-
-.footer
-  text-align: center
-  padding: rem(30px) rem(50px)
-  background-color: red
+.hidden
+  display: none
+  
+img
+  width: 100%
+  display: block
