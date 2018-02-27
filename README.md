@@ -4,7 +4,7 @@ $ node 9.3.0
 ``` 
 
 #### Installation
-- > npm i
+- > npm install
 
 #### Development
 - > gulp
@@ -15,7 +15,7 @@ $ node 9.3.0
 #### Start server on the 8080 port
 - > http://localhost:8080/
 
-#### Svg to icon_font generator
+#### Svg to icon-font generator
 
 1. add to folder 'icons' svg files
 2. - > gulp icon

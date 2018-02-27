@@ -1,18 +1,4 @@
 @import "settings"
-html
-  height: 100%
-  width: 100%
-
-body
-  font-family: $global-font-family
-  line-height: $global-line-height
-  font-size: $global-font-size
-  background-color: $global-background
-  min-width: 320px
-  position: relative
-  height: 100%
-  width: 100%
-
 *
   -webkit-box-sizing: border-box
   -moz-box-sizing: border-box
@@ -23,15 +9,32 @@ body
   -ms-hyphens: auto
   -moz-hyphens: auto
   hyphens: auto
+
+html
+  height: 100%
+  width: 100%
+
+body
+  font-family: Arial, sans-serif
+  line-height: $global-line-height
+  font-size: 100%
+  background-color: $global-background
+  min-width: 320px
+  position: relative
+  height: 100%
+  width: 100%
+
 ul, p, h1, h2, h3, h4, h5, h6
   margin: 0
   padding: 0
-  
+
 li
   list-style-type: none
 
-button, a
+button
   cursor: pointer
+  &:focus
+    outline: 0
 
 ::-webkit-inner-spin-button,
 ::-webkit-outer-spin-button
@@ -39,7 +42,7 @@ button, a
 
 a
   text-decoration: none
-  
+
 input:invalid
   box-shadow: none
 
@@ -72,8 +75,8 @@ input
   &[type="time"],
   &[type="url"],
   &[type="week"]
-    font-size: $global-font-size
-    border: 1px solid $black
+    font-size: 16px
+    border: 1px solid #000000
 
 input::-webkit-input-placeholder
   opacity: 1
@@ -90,15 +93,7 @@ input::-moz-placeholder
 input:-ms-input-placeholder
   opacity: 1
   text-overflow: ellipsis
-  
-.clear:after
-  content: ''
-  display: block
-  clear: both
-  
-.hidden
-  display: none
-  
+
 img
   width: 100%
-  display: block
+  display: inline-block

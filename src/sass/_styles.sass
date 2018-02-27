@@ -1,9 +1,16 @@
 @import "settings"
+.hidden
+  display: none !important
+  
+.clear:after
+  content: ''
+  display: block
+  clear: both
+  
 .container
   width: 100%
   max-width: $global-width
   padding: $global-container-padding
   margin: 0 auto
   background-color: #cccccc
-  font-family:  $great_vibes_regular
   
