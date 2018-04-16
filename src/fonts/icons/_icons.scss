@@ -1,0 +1,164 @@
+@font-face {
+	font-family: "Icons";
+	src: url('../fonts/icons/Icons.eot');
+	src: url('../fonts/icons/Icons.eot?#iefix') format('eot'),
+		url('../fonts/icons/Icons.woff2') format('woff2'),
+		url('../fonts/icons/Icons.woff') format('woff'),
+		url('../fonts/icons/Icons.ttf') format('truetype'),
+		url('../fonts/icons/Icons.svg#Icons') format('svg');
+}
+
+@mixin icon-styles {
+	font-family: "Icons";
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: normal;
+	// speak: none; // only necessary if not using the private unicode range (firstGlyph option)
+	text-decoration: none;
+	text-transform: none;
+}
+
+%icon {
+	@include icon-styles;
+}
+
+@function icon-char($filename) {
+	$char: "";
+
+	@if $filename == alarm-bell {
+		$char: "\E001";
+	}
+	@if $filename == arrow-left {
+		$char: "\E002";
+	}
+	@if $filename == arrow-right {
+		$char: "\E003";
+	}
+	@if $filename == cancel {
+		$char: "\E004";
+	}
+	@if $filename == check {
+		$char: "\E005";
+	}
+	@if $filename == edit-bold {
+		$char: "\E006";
+	}
+	@if $filename == icon-search {
+		$char: "\E007";
+	}
+	@if $filename == icon_bounty_dark {
+		$char: "\E008";
+	}
+	@if $filename == icon_bounty_white {
+		$char: "\E009";
+	}
+	@if $filename == icon_dashboard_dark {
+		$char: "\E00A";
+	}
+	@if $filename == icon_exchange {
+		$char: "\E00B";
+	}
+	@if $filename == icon_faq_dark {
+		$char: "\E00C";
+	}
+	@if $filename == icon_settings_dark {
+		$char: "\E00D";
+	}
+	@if $filename == icon_token_sale_stats_dark {
+		$char: "\E00E";
+	}
+	@if $filename == icon_transaction_dark {
+		$char: "\E00F";
+	}
+	@if $filename == icon_whitelist_dark {
+		$char: "\E010";
+	}
+	@if $filename == save {
+		$char: "\E011";
+	}
+	@if $filename == unlock {
+		$char: "\E012";
+	}
+	@if $filename == user-copy {
+		$char: "\E013";
+	}
+	@if $filename == verification {
+		$char: "\E014";
+	}
+
+	@return $char;
+}
+
+@mixin icon($filename, $insert: before, $extend: true) {
+	&:#{$insert} {
+		@if $extend {
+			@extend %icon;
+		} @else {
+			@include icon-styles;
+		}
+		content: icon-char($filename);
+	}
+}
+
+.icon-alarm-bell {
+	@include icon(alarm-bell);
+}
+.icon-arrow-left {
+	@include icon(arrow-left);
+}
+.icon-arrow-right {
+	@include icon(arrow-right);
+}
+.icon-cancel {
+	@include icon(cancel);
+}
+.icon-check {
+	@include icon(check);
+}
+.icon-edit-bold {
+	@include icon(edit-bold);
+}
+.icon-icon-search {
+	@include icon(icon-search);
+}
+.icon-icon_bounty_dark {
+	@include icon(icon_bounty_dark);
+}
+.icon-icon_bounty_white {
+	@include icon(icon_bounty_white);
+}
+.icon-icon_dashboard_dark {
+	@include icon(icon_dashboard_dark);
+}
+.icon-icon_exchange {
+	@include icon(icon_exchange);
+}
+.icon-icon_faq_dark {
+	@include icon(icon_faq_dark);
+}
+.icon-icon_settings_dark {
+	@include icon(icon_settings_dark);
+}
+.icon-icon_token_sale_stats_dark {
+	@include icon(icon_token_sale_stats_dark);
+}
+.icon-icon_transaction_dark {
+	@include icon(icon_transaction_dark);
+}
+.icon-icon_whitelist_dark {
+	@include icon(icon_whitelist_dark);
+}
+.icon-save {
+	@include icon(save);
+}
+.icon-unlock {
+	@include icon(unlock);
+}
+.icon-user-copy {
+	@include icon(user-copy);
+}
+.icon-verification {
+	@include icon(verification);
+}
