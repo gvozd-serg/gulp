@@ -9,7 +9,6 @@ var gulp = require('gulp'),
     cache = require('gulp-cache'),
     browserSync = require("browser-sync"),
     autoprefixer = require('gulp-autoprefixer'),
-    htmlmin = require('gulp-html-minifier'),
     iconfont = require('gulp-iconfont'),
     iconfontCss = require('gulp-iconfont-css');
 
@@ -101,7 +100,6 @@ gulp.task('build', ['clean', 'sass', 'scripts'], function () {
     .pipe(gulp.dest('dist/js'));
 
   var buildHtml = gulp.src('src/*.html')
-    .pipe(htmlmin({collapseWhitespace: true}))
     .pipe(gulp.dest('dist'));
 });
 
