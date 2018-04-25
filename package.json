@@ -20,8 +20,7 @@
     "gulp-uglify": "^3.0.0",
     "jquery": "^3.3.1",
     "npm-git-install": "^0.3.0",
-    "reset-css": "^2.2.1",
-    "sass-rem": "^2.0.0"
+    "reset-css": "^2.2.1"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
