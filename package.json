@@ -32,5 +32,7 @@
   "author": "bets",
   "license": "ISC",
   "homepage": "https://bitbucket.org/Betsichka/gulp-template#readme",
-  "dependencies": {}
+  "dependencies": {
+    "gulp-install": "^1.1.0"
+  }
 }
