@@ -27,83 +27,89 @@
 @function icon-char($filename) {
 	$char: "";
 
-	@if $filename == alarm-bell {
+	@if $filename == arrow {
 		$char: "\E001";
 	}
-	@if $filename == arrow-left {
+	@if $filename == arrow_slider_left {
 		$char: "\E002";
 	}
-	@if $filename == arrow-right {
+	@if $filename == arrow_slider_right {
 		$char: "\E003";
 	}
-	@if $filename == attach {
+	@if $filename == backtotop {
 		$char: "\E004";
 	}
-	@if $filename == cancel {
+	@if $filename == basket {
 		$char: "\E005";
 	}
-	@if $filename == check {
+	@if $filename == clock {
 		$char: "\E006";
 	}
-	@if $filename == edit-bold {
+	@if $filename == community-center {
 		$char: "\E007";
 	}
-	@if $filename == icon-search {
+	@if $filename == fb {
 		$char: "\E008";
 	}
-	@if $filename == icon_bounty_dark {
+	@if $filename == forum-icon-home-page {
 		$char: "\E009";
 	}
-	@if $filename == icon_bounty_white {
+	@if $filename == glossary {
 		$char: "\E00A";
 	}
-	@if $filename == icon_dashboard_dark {
+	@if $filename == google {
 		$char: "\E00B";
 	}
-	@if $filename == icon_exchange {
+	@if $filename == hamburger-mobile-close {
 		$char: "\E00C";
 	}
-	@if $filename == icon_faq_dark {
+	@if $filename == hamburger-mobile-open {
 		$char: "\E00D";
 	}
-	@if $filename == icon_settings_dark {
+	@if $filename == instagram-feed-home {
 		$char: "\E00E";
 	}
-	@if $filename == icon_token_sale_stats_dark {
+	@if $filename == instgram {
 		$char: "\E00F";
 	}
-	@if $filename == icon_transaction_dark {
+	@if $filename == linkedin {
 		$char: "\E010";
 	}
-	@if $filename == icon_whitelist_dark {
+	@if $filename == logo {
 		$char: "\E011";
 	}
-	@if $filename == information {
+	@if $filename == my_account {
 		$char: "\E012";
 	}
-	@if $filename == photocamera {
+	@if $filename == partner-center {
 		$char: "\E013";
 	}
-	@if $filename == plus {
+	@if $filename == pinterest {
 		$char: "\E014";
 	}
-	@if $filename == save {
+	@if $filename == rss {
 		$char: "\E015";
 	}
-	@if $filename == social_instagram {
+	@if $filename == search {
 		$char: "\E016";
 	}
-	@if $filename == trash {
+	@if $filename == trading-signals {
 		$char: "\E017";
 	}
-	@if $filename == unlock {
+	@if $filename == triangle-closed {
 		$char: "\E018";
 	}
-	@if $filename == user-copy {
+	@if $filename == triangle-open {
 		$char: "\E019";
 	}
-	@if $filename == verification {
+	@if $filename == twitter {
 		$char: "\E01A";
+	}
+	@if $filename == visa {
+		$char: "\E01B";
+	}
+	@if $filename == visa_master {
+		$char: "\E01C";
 	}
 
 	@return $char;
@@ -120,81 +126,87 @@
 	}
 }
 
-.icon-alarm-bell {
-	@include icon(alarm-bell);
+.icon-arrow {
+	@include icon(arrow);
 }
-.icon-arrow-left {
-	@include icon(arrow-left);
+.icon-arrow_slider_left {
+	@include icon(arrow_slider_left);
 }
-.icon-arrow-right {
-	@include icon(arrow-right);
+.icon-arrow_slider_right {
+	@include icon(arrow_slider_right);
 }
-.icon-attach {
-	@include icon(attach);
+.icon-backtotop {
+	@include icon(backtotop);
 }
-.icon-cancel {
-	@include icon(cancel);
+.icon-basket {
+	@include icon(basket);
 }
-.icon-check {
-	@include icon(check);
+.icon-clock {
+	@include icon(clock);
 }
-.icon-edit-bold {
-	@include icon(edit-bold);
+.icon-community-center {
+	@include icon(community-center);
 }
-.icon-icon-search {
-	@include icon(icon-search);
+.icon-fb {
+	@include icon(fb);
 }
-.icon-icon_bounty_dark {
-	@include icon(icon_bounty_dark);
+.icon-forum-icon-home-page {
+	@include icon(forum-icon-home-page);
 }
-.icon-icon_bounty_white {
-	@include icon(icon_bounty_white);
+.icon-glossary {
+	@include icon(glossary);
 }
-.icon-icon_dashboard_dark {
-	@include icon(icon_dashboard_dark);
+.icon-google {
+	@include icon(google);
 }
-.icon-icon_exchange {
-	@include icon(icon_exchange);
+.icon-hamburger-mobile-close {
+	@include icon(hamburger-mobile-close);
 }
-.icon-icon_faq_dark {
-	@include icon(icon_faq_dark);
+.icon-hamburger-mobile-open {
+	@include icon(hamburger-mobile-open);
 }
-.icon-icon_settings_dark {
-	@include icon(icon_settings_dark);
+.icon-instagram-feed-home {
+	@include icon(instagram-feed-home);
 }
-.icon-icon_token_sale_stats_dark {
-	@include icon(icon_token_sale_stats_dark);
+.icon-instgram {
+	@include icon(instgram);
 }
-.icon-icon_transaction_dark {
-	@include icon(icon_transaction_dark);
+.icon-linkedin {
+	@include icon(linkedin);
 }
-.icon-icon_whitelist_dark {
-	@include icon(icon_whitelist_dark);
+.icon-logo {
+	@include icon(logo);
 }
-.icon-information {
-	@include icon(information);
+.icon-my_account {
+	@include icon(my_account);
 }
-.icon-photocamera {
-	@include icon(photocamera);
+.icon-partner-center {
+	@include icon(partner-center);
 }
-.icon-plus {
-	@include icon(plus);
+.icon-pinterest {
+	@include icon(pinterest);
 }
-.icon-save {
-	@include icon(save);
+.icon-rss {
+	@include icon(rss);
 }
-.icon-social_instagram {
-	@include icon(social_instagram);
+.icon-search {
+	@include icon(search);
 }
-.icon-trash {
-	@include icon(trash);
+.icon-trading-signals {
+	@include icon(trading-signals);
 }
-.icon-unlock {
-	@include icon(unlock);
+.icon-triangle-closed {
+	@include icon(triangle-closed);
 }
-.icon-user-copy {
-	@include icon(user-copy);
+.icon-triangle-open {
+	@include icon(triangle-open);
 }
-.icon-verification {
-	@include icon(verification);
+.icon-twitter {
+	@include icon(twitter);
+}
+.icon-visa {
+	@include icon(visa);
+}
+.icon-visa_master {
+	@include icon(visa_master);
 }

@@ -1,10 +1,10 @@
 #### Require
 ```
-$ node 9.3.0
+$ node
 ``` 
 
 #### Installation
-- > npm install
+- > npm i
 
 #### Development
 - > gulp
@@ -20,11 +20,6 @@ $ node 9.3.0
 1. add to folder 'icons' svg files
 2. - > gulp icon
 3. Add to project sass/_icons.scss
-
-#### Npm update dependencies
-- > npm i -g npm-check-updates
-- > npm-check-updates -u
-- > npm install
 
 #### Npm latest
 - > npm install npm@latest -g
