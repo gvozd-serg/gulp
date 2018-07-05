@@ -1,5 +1,5 @@
 'use strict';
-var gulp = require('gulp'),
+let gulp = require('gulp'),
     sourcemaps = require('gulp-sourcemaps'),
     concat = require('gulp-concat'),
     csso = require('gulp-csso'),
@@ -32,7 +32,7 @@ gulp.task('scripts', function () {
     .pipe(browserSync.reload({stream: true}));
 });
 
-var fontName = 'Icons';
+let fontName = 'Icons';
 gulp.task('icon', function () {
   gulp.src(['src/icons/*.svg'])
     .pipe(iconfontCss({
@@ -80,26 +80,26 @@ gulp.task('clean', function () {
 
 gulp.task('build', ['clean', 'sass', 'scripts'], function () {
 
-  var buildCss = gulp.src([
+  let buildCss = gulp.src([
     'src/css/all.css',
     'src/css/libs.min.css'
   ])
     .pipe(csso())
     .pipe(gulp.dest('dist/css'));
 
-  var buildFonts = gulp.src('src/fonts/**/*')
+  let buildFonts = gulp.src('src/fonts/**/*')
     .pipe(gulp.dest('dist/fonts'));
 
-  var buildIconFonts = gulp.src('src/icons/**/*')
+  let buildIconFonts = gulp.src('src/icons/**/*')
     .pipe(gulp.dest('dist/icons'));
 
-  var buildImg = gulp.src('src/img/**/*')
+  let buildImg = gulp.src('src/img/**/*')
     .pipe(gulp.dest('dist/img'));
 
-  var buildJs = gulp.src('src/js/**/*')
+  let buildJs = gulp.src('src/js/**/*')
     .pipe(gulp.dest('dist/js'));
 
-  var buildHtml = gulp.src('src/*.html')
+  let buildHtml = gulp.src('src/*.html')
     .pipe(gulp.dest('dist'));
 });
 
