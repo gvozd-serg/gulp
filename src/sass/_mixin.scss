@@ -1,31 +1,23 @@
 /* MEDIA */
 @mixin breakpoint($point) {
-  @if $point == laptop-l {
-    @media (max-width: 1440px) {
-      @content;
-    }
-  } @else if $point == laptop {
-    @media (max-width: 1024px) {
+    @if $point == laptop {
+    @media (max-width: 1439px) {
       @content;
     }
   } @else if $point == tablet {
-    @media (max-width: 768px) {
+    @media (max-width: 1023px) {
       @content;
     }
   } @else if $point == mobile-l {
-    @media (max-width: 425px) {
+    @media (max-width: 767px) {
       @content;
     }
   } @else if $point == mobile-m {
-    @media (max-width: 375px) {
+    @media (max-width: 423px) {
       @content;
     }
   } @else if $point == mobile-s {
-    @media (max-width: 320px) {
-      @content;
-    }
-  } @else if $point == tabletMin {
-    @media (min-width: 768px) {
+    @media (max-width: 375px) {
       @content;
     }
   }
