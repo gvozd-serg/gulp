@@ -10,17 +10,11 @@
   overflow-y: -moz-scrollbars-none
 
 .container
-  min-height: 300px
+  min-height: 100vh
   max-width: calc(1440px + 20px)
   margin: 0 auto
   padding: 0 10px
-  background-color: red
+p
+  font-size: 100px
   @include breakpoint(laptop)
-    background-color: blue
-  @include breakpoint(tablet)
-    background-color: green
-  @include breakpoint(mobile-l)
-    background-color: grey
-  @include breakpoint(mobile-m)
-    background-color: #ff71ed
-
+    font-size: 30px
