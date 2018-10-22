@@ -85,23 +85,25 @@
   }
 }
 
-@mixin scrollbar($track, $thumb, $width, $radius) {
+@mixin scrollbar($color, $color-line){
   &::-webkit-scrollbar {
     -webkit-appearance: none;
   }
+
   &::-webkit-scrollbar:vertical {
-    width: $width;
+    width: 3px;
   }
+
   &::-webkit-scrollbar:horizontal {
-    height: $width;
+    height: 3px;
   }
+
   &::-webkit-scrollbar-thumb {
-    background-color: $thumb;
-    border-radius: $radius;
+    background-color: $color;
     border: none;
   }
+
   &::-webkit-scrollbar-track {
-    border-radius: $radius;
-    background-color: $track;
+    background-color: $color-line;
   }
 }
