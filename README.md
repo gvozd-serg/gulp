@@ -1,8 +1,3 @@
-#### Require
-```
-$ node
-``` 
-
 #### Installation
 - > npm i
 
