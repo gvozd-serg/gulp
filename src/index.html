@@ -17,23 +17,25 @@
   <link rel="stylesheet" href="css/all.css"/>
 </head>
 <body>
-<header class="header">
+<!-- test form -->
   <div class="container">
+    <form class="send-form">
+      <input type="hidden" name="project_name" value="bets">
+      <input type="hidden" name="admin_email" value="bets2305@gmail.com">
+      <input type="hidden" name="form_subject" value="test">
 
+      <input name="name" type="text" placeholder="Имя">
+      <input name="phone" type="number" placeholder="Телефон">
+      <textarea name="sms" placeholder="Сообщение"></textarea>
+      <button class=" btn btn-form send-button">Отправить</button>
+      <div class="thanks-message ">
+        Thank you for your message!
+      </div>
+    </form>
   </div>
-</header>
-<main class="main">
-  <div class="container">
-
-  </div>
-</main>
-<footer class="footer">
-  <div class="container">
-
-  </div>
-</footer>
-
+<!-- end test form -->
 <script src="js/libs.min.js"></script>
+<script src="js/send-form.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>

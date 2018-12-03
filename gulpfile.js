@@ -103,9 +103,12 @@ gulp.task('build', ['clean', 'sass', 'scripts'], function () {
 
   let buildHtml = gulp.src('src/*.html')
     .pipe(gulp.dest('dist'));
+
+  let buildPhp = gulp.src('src/*.php')
+    .pipe(gulp.dest('dist'));
 });
 
-gulp.task('clear', function (callback) {
+gulp.task('clear', function () {
   return cache.clearAll();
 });
 

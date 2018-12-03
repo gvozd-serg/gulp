@@ -27,13 +27,16 @@ body
 ul, p, h1, h2, h3, h4, h5, h6
   margin: 0
   padding: 0
+
 h1, h2, h3, h4, h5, h6, strong, b
   font-weight: normal
+
 li
   list-style-type: none
 
 button, a
   cursor: pointer
+
   &:focus
     outline: 0
 
@@ -62,6 +65,10 @@ input[type=number]
 input
   -webkit-appearance: none
   display: inline-block
+
+  &:focus
+    outline: 0 !important
+
   &[type="color"],
   &[type="date"],
   &[type="datetime"],
