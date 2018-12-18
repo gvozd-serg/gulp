@@ -15,13 +15,16 @@ a[title]
   transition: opacity ease 0.4s
   background-color: red
   color: #ffffff
+
   &.open
     z-index: 100
     opacity: 1
 
-
 .container
-  min-height: 100vh
   max-width: calc(1440px + 20px)
   margin: 0 auto
   padding: 0 10px
+  min-height: 100px
+  background-color: red
+  @media screen and (max-width: 768px)
+    background-color: blue
