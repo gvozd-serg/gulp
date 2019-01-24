@@ -1,7 +1,4 @@
 $(document).ready(function () {
-
-});
-$(document).ready(function () {
   $('.send-form').submit(function () {
     let th = $(this);
     $.ajax({
