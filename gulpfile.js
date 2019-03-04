@@ -15,13 +15,13 @@ let gulp = require('gulp'),
     ftp = require('vinyl-ftp'),
     iconfontCss = require('gulp-iconfont-css');
 
-gulp.task('deploy', function() {
+gulp.task('deploy', function () {
   // host, user и password, тут всё как в FileZilla Client.
   var conn = ftp.create({
-    host:      'files.000webhost.com',
-    user:      'ten-man',
-    password:  '12121212',
-    parallel:  10,
+    host: '',
+    user: '',
+    password: '',
+    parallel: 10,
     log: gutil.log
   });
 
@@ -47,8 +47,7 @@ gulp.task('browserSync', function () {
 
 gulp.task('scripts', function () {
   return gulp.src([
-    'node_modules/jquery/dist/jquery.min.js',
-    // 'node_modules/slick-carousel/slick/slick.min.js',
+    'node_modules/jquery/dist/jquery.min.js'
     // 'node_modules/magnific-popup/dist/jquery.magnific-popup.min.js'
   ])
       .pipe(concat('libs.min.js'))
