@@ -33,8 +33,10 @@ ul, p, h1, h2, h3, h4, h5, h6
 
 h1, h2, h3, h4, h5, h6, strong, b
   font-weight: normal
+  padding: 0
+  margin: 0
 
-li
+ul li
   list-style-type: none
 
 button, a
@@ -73,7 +75,6 @@ input
 
   &:focus
     outline: 0 !important
-
   &[type="color"],
   &[type="date"],
   &[type="datetime"],
@@ -115,5 +116,6 @@ iframe
 
 textarea
   resize: none
+
   &:focus
     outline: 0
